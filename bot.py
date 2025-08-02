@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 from educhain import Educhain, LLMConfig
 from langchain_google_genai import ChatGoogleGenerativeAI
+import webserver
 
 # Load env variables
 load_dotenv()
@@ -88,4 +89,5 @@ async def on_message(message):
             await message.channel.send(f"❌ Error: {e}")
 
 # Start bot
+webserver.keep_alive()
 client_bot.run(DISCORD_BOT_TOKEN)
