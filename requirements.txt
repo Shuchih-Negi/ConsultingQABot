@@ -1,0 +1,8 @@
+discord.py
+pdfplumber
+faiss-cpu
+numpy
+python-dotenv
+sentence-transformers
+langchain-google-genai
+educhain
